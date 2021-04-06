@@ -4,7 +4,7 @@
 function Ticket(movieTime, movieAge, viewerAge) { //builds object with values #3
   this.movieAge = movieAge;
   this.viewerAge = viewerAge;
-  
+  this.movieTime = movieTime;
 }
 
 Ticket.prototype.ticketPrice = function () { //calc ticket price using method on object return price #5
@@ -16,7 +16,7 @@ Ticket.prototype.ticketPrice = function () { //calc ticket price using method on
 
 //User Logic
 
-$(document).ready(function () { 
+$(document).ready(function () {
   $("form").submit(function (event) {
     event.preventDefault();
 
@@ -25,6 +25,6 @@ $(document).ready(function () {
     const convertViewerAge = parseInt($("#viewer-age").val());
 
     let moviePrice = new Ticket(convertMovieTime, convertMovieAge, convertViewerAge) //calling constructor and passing values gathered #2
-    $("#output").text(moviePrice.ticketPrice()); //call ticket price after object construction #4
+    $("#output").text(`Your movie will start at ${$("#movie-time option:selected").text()} and cost $${moviePrice.ticketPrice()}.00`); //call ticket price after object construction #4
   })
 })
