@@ -13,7 +13,7 @@ Ticket.prototype.ticketPrice = function () { //calc ticket price using method on
   if ($("#popcorn").is(":checked")) {
     myPrice += 12;
     }
-
+//don't break the loop
   if ($("#candy").is(":checked")) {
     myPrice += 8;
   }
