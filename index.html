@@ -10,7 +10,9 @@
 </head>
 
 <body>
-  <h1>Hubber's Movies</h1>
+  <div class="jumbotron">
+    <h1>Hubber's Movies</h1>
+  </div>
   <form action="">
     <div class="continer">
       <select name="movie-title" id="movie-age" class="form-select">
@@ -34,6 +36,14 @@
         <option value="6">Adult 20-61</option>
         <option value="1">AARP 62+</option>
       </select>
+      <div>
+        <input type="checkbox" id="popcorn" name="popcorn" value="12">
+        <label for="pop"> Give Me Popcorn</label><br>
+        <input type="checkbox" id="candy" name="candy" value="8">
+        <label for="candy"> I want some Candy</label><br>
+        <input type="checkbox" id="drink" name="drink" value="6">
+        <label for="drink"> I am Soooo thirsty</label><br>
+      </div>
       <div id="output">
       </div>
       <button type="submit" class="btn btn-success">MoviePrice</button>
